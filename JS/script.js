@@ -1,6 +1,7 @@
 class SkillTree {
-    constructor(classe, skillLevel1, skillLevel2,skillLevel3,skillLevel4,skillLevel5,skillLevel6,skillLevel7,skillLevel8,skillLevel9,skillLevel10 ) {
+    constructor(classe, level, skillLevel1, skillLevel2,skillLevel3,skillLevel4,skillLevel5,skillLevel6,skillLevel7,skillLevel8,skillLevel9,skillLevel10) {
       this.classe = classe;
+      this.level = level;
       this.skillLevel1 = skillLevel1;
       this.skillLevel2 = skillLevel2;
       this.skillLevel3 = skillLevel3;
@@ -13,7 +14,13 @@ class SkillTree {
       this.skillLevel10 = skillLevel10;
     }
 
-    usarSkill1(){}
+    usarSkill1(){
+      switch(this.classe){
+        case 'Guerreiro':
+        console.log('Deu um corte');
+        break;
+      }
+    }
     usarSkill2(){}
     usarSkill3(){}
     usarSkill4(){}
@@ -22,11 +29,16 @@ class SkillTree {
     usarSkill7(){}
     usarSkill8(){}
     usarSkill9(){}
-    usarSkill10(){}
+    usarSkill10(){
+      switch (this.classe){
+        case 'Arcano':
+          console.log("TESTICULAR TORSION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      }
+    }
   }
   
   class Personagem extends SkillTree {
-    constructor(nome, idade, raça, força, destreza, defesa, classe) {
+    constructor(nome,idade, raça, força, destreza, defesa, classe) {
       super(classe);
       this.nome = nome;
       this.idade = idade;
@@ -40,12 +52,12 @@ class SkillTree {
     defender(){}
     usarItem(){}
     apresentação() {
-      console.error(`Esmagarei o seu crânio, Orc imundo! Eu sou ${this.nome}`);
+      console.log(`Esmagarei o seu crânio, Orc imundo! Eu sou ${this.nome}`);
     }
   }
   
-  const personagem1 = new Personagem(
-    'Gremlörd',
+  const PersoGremlord = new Personagem(
+    'Gremlörd Rajang',
     30,
     'Anão',
     100,
@@ -54,6 +66,49 @@ class SkillTree {
     'Berserker'
   );
   
-  personagem1.apresentação();
-  console.log(personagem1.classe); // Output: "Guerreiro Classe"]
+ 
 
+const persoEvo = new Personagem(
+  'Evo Kramer',
+  30,
+  'Humano',
+  90,
+  40,
+  60,
+  'Paladino'
+)
+
+const persoYarper = new Personagem(
+  'Yarper',
+  60,
+  'Anão',
+  50,
+  30,
+  20,
+  'Arcano'
+  )
+
+const persoThokk = new Personagem(
+  'Thokk',
+  22,
+  'Meio Elfo',
+  70,
+  60,
+  80,
+  'Arcano'
+)
+
+const persoCaspian = new Personagem(  
+  'Caspian',
+  21,
+  'Merfolk',
+  100,
+  70,
+  70,
+  'Guerreiro'
+)
+
+const firstPerson = new Personagem('Gremlörd' ,31, 'anão', 100, 200, 300, 'Guerreiro');
+firstPerson.usarSkill1()
+console.log(firstPerson)
+console.log(firstPerson.classe);
