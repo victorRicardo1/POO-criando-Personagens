@@ -29,12 +29,7 @@ class SkillTree {
     usarSkill7(){}
     usarSkill8(){}
     usarSkill9(){}
-    usarSkill10(){
-      switch (this.classe){
-        case 'Arcano':
-          console.log("TESTICULAR TORSION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-      }
-    }
+    usarSkill10(){}
   }
   
   class Personagem extends SkillTree {
