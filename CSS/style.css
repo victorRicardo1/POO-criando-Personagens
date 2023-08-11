@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    background-color: black;
+}
+
+.principal{
+    display: flex;
+    margin: auto;
+    padding: 50px;
+    background-color: rgba(253, 43, 186, 0.386);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 30px;
+}
+
+.principal .inputTXT{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.principal .inputAut{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.principal .subbtn{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 70%;
+}
