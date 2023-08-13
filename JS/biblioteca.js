@@ -46,7 +46,7 @@ const livro2 = new Book("The call of Cthullu", "H.P Lovecraft");
 const livro3 = new Book("Moby Dick", "Herman Melville");
 
 const pessoa1 = new Pessoa("Michael");
-const pessoa2 = new Pessoa("Luthien");
+ const pessoa2 = new Pessoa("Luthien");
 
 pessoa1.livroEmprestado(livro3);
 pessoa1.livroEmprestado(livro1);
